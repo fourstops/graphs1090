@@ -53,19 +53,20 @@ do
 
     m=$(( SEC / DRAW_INTERVAL))
 
-    if   (( m % 2 == 1 )); then          graphs 2h
-    elif (( m % 4 == 2 )); then          graphs 8h
-    elif (( m % 8 == 4 )); then          graphs 24h
-    elif (( m % 16 == 8 )); then         graphs 48h
-    elif (( m % 32 == 16 )); then        graphs 7d
-    elif (( m % 64 == 32 )); then        graphs 14d
-    elif (( m % 128 == 64 )); then       graphs 30d
-    elif (( m % 256 == 128 )); then      graphs 90d
-    elif (( m % 512 == 256 )); then      graphs 180d
-    elif (( m % 1024 == 512 )); then     graphs 365d
-    elif (( m % 2048 == 1024 )); then    graphs 730d
-    elif (( m % 4096 == 2048 )); then    graphs 1095d
-    elif (( m % 8192 == 4096 )); then    graphs 1825d
+    if   (( m % 1 == 1 )); then          graphs 15m
+    elif (( m % 2 == 2 )); then          graphs 2h
+    elif (( m % 4 == 4 )); then          graphs 8h
+    elif (( m % 8 == 8 )); then          graphs 24h
+    elif (( m % 16 == 16 )); then        graphs 48h
+    elif (( m % 32 == 32 )); then        graphs 7d
+    elif (( m % 64 == 64 )); then        graphs 14d
+    elif (( m % 128 == 128 )); then      graphs 30d
+    elif (( m % 256 == 256 )); then      graphs 90d
+    elif (( m % 512 == 512 )); then      graphs 180d
+    elif (( m % 1024 == 1024 )); then    graphs 365d
+    elif (( m % 2048 == 2048 )); then    graphs 730d
+    elif (( m % 4096 == 4096 )); then    graphs 1095d
+    elif (( m % 8192 == 8192 )); then    graphs 1825d
     else                                 graphs 3650d
     fi
 

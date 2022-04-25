@@ -2,7 +2,7 @@
 
 // Set the default time frame to use when loading images when the page is first accessed.
 // Can be set to 2h, 8h, 24h, 7d, 30d, or 365d.
-$timeFrame = '24h';
+$timeFrame = '15m';
 
 // Set this to the hostname of the system which is running dump1090.
 $hostName = 'localhost';
@@ -120,7 +120,7 @@ function switchView(newTimeFrame) {
         $("#system-network_bandwidth-image").attr("src", "graphs/system-" + $hostName + "-network_bandwidth-" + $timeFrame + ".png?time=" + $timestamp);
         $("#system-network_bandwidth-link").attr("href", "graphs/system-" + $hostName + "-network_bandwidth-" + $timeFrame + ".png?time=" + $timestamp);
     }
-    
+
     $("#system-memory-image").attr("src", "graphs/system-" + $hostName + "-memory-" + $timeFrame + ".png?time=" + $timestamp);
     $("#system-memory-link").attr("href", "graphs/system-" + $hostName + "-memory-" + $timeFrame + ".png?time=" + $timestamp);
 
@@ -145,6 +145,7 @@ function switchView(newTimeFrame) {
     $("#system-disk_io_octets-link").attr("href", "graphs/system-" + $hostName + "-disk_io_octets-" + $timeFrame + ".png?time=" + $timestamp);
 
 	// Set the button related to the selected time frame to active.
+    $("#btn-15m").removeClass('active');
     $("#btn-2h").removeClass('active');
     $("#btn-8h").removeClass('active');
     $("#btn-24h").removeClass('active');
